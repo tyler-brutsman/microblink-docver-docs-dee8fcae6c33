@@ -1,0 +1,8 @@
+{
+  "label": "Introduction",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Welcome to Microblink's BlinkId Verify API. This API enables scanning of over 500 international identity documents, including driving licenses, national identity cards, passports, and others."
+  }
+}

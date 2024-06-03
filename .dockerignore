@@ -1,0 +1,6 @@
+.git
+.vscode
+.storybook
+*Dockerfile*
+*docker-compose*
+node_modules

@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  docver-docs:
+      image: docver-docs:local
+      container_name: docver-docs
+      build:
+        context: .
+        dockerfile: Dockerfile
+      environment:
+        - NG_SERVER_NAME=localhost
+        - NG_LISTEN=3000
+      ports: [3000:3000]

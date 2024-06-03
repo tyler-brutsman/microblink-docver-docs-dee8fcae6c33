@@ -1,0 +1,32 @@
+worker_processes 1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include             mime.types;
+    default_type        application/octet-stream;
+    sendfile            on;
+    keepalive_timeout   65;
+
+    server {
+        listen      ${NG_LISTEN};
+        server_name ${NG_SERVER_NAME};
+        index       index.html;
+        root /var/www;
+        rewrite ^/docver-docs/(.*)$ /$1 last;
+        location / {
+            # Important for client-side routing to work
+            try_files $uri $uri /index.html;
+            add_header Cache-Control "public, max-age=604800, immutable";
+        }
+        location /health {
+            access_log off;
+            return 200 "Healthy\n";
+        }
+        location ~* \.(html)$ {
+            add_header Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0" always;
+        }
+    }
+}

@@ -51,4 +51,4 @@ Build services defined in **docker-compose.yml** file
 docker-compose up
 ```
 
-Run services defined in **docker-compose.yml** file
+Run services defined in **docker-compose.yml** file# microblink-docver-docs-dee8fcae6c33

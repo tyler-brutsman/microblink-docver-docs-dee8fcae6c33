@@ -1,7 +1,7 @@
 ---
 id: self-hosted-api
 title: Self hosted API
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Self hosted API

@@ -137,12 +137,7 @@ const config: Config = {
       defaultMode: 'light',
       disableSwitch: true,
       respectPrefersColorScheme: false,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-      additionalLanguages: ['java']
-    },
+    }
   } satisfies Preset.ThemeConfig,
 };
 
